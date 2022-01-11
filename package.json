@@ -1,0 +1,36 @@
+{
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "nodemon": "^2.0.15",
+    "pg": "^8.7.1",
+    "postgres": "^1.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "name": "e-commerce",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "devStart": "nodemon server.mjs",
+    "start": "nodemon server.mjs",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serverstart": "DEBUG=express-locallibrary-tutorial:* npm run devstart"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shanon-richet/e-commerce.git"
+  },
+  "keywords": [
+    "commerce"
+  ],
+  "author": "richet shanon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shanon-richet/e-commerce/issues"
+  },
+  "homepage": "https://github.com/shanon-richet/e-commerce#readme"
+}
