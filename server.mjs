@@ -12,6 +12,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename)
 const app = express()
 
+app.use(express.static('public'))
 app.use(bodyParser.json())
 app.use(cors())
 app.use(router)
@@ -19,7 +20,6 @@ app.use(router)
 app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, '/public/index.html'))
 });
-
 
 app.listen(port)
 console.log('Server started at http://localhost:' + port);
