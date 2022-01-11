@@ -1,5 +1,4 @@
 import express from "express";
-
 import pool from "../config.mjs";
 
 const router = express.Router()
@@ -15,6 +14,5 @@ router.route('/api')
     .put(function (req, res) {
         res.send('Update the book');
     })
-
 
 export default router;
