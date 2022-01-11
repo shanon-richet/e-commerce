@@ -25,6 +25,10 @@ VALUES
     ('Michel', 'Plainchamp', 'michel.plainchamp@becode.org', '`T7Pzk', false)
     ;
 
+
+
+
+
 CREATE TABLE products
     (id SERIAL PRIMARY KEY,
     title TEXT NOT NULL,
@@ -49,10 +53,12 @@ VALUES
 ;
 
 CREATE TABLE card (
-    id SERIAL PRIMARY KEY,
-    first_name TEXT NOT NULL,
-    last_name TEXT NOT NULL,
-    email TEXT NOT NULL,
-    pass TEXT NOT NULL,
-    administrator boolean
+    imageURL TEXT NOT NULL,
+    price INTEGER NOT NULL
 );
+
+INSERT INTO card (title, price, count, total)
+VALUES
+    ('Mens Cotton Jacket', 55.99, 2, 111.98),
+    ('White Gold Plated Princess', 9.99, 1, 9.99)
+;

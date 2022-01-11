@@ -1,0 +1,27 @@
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+section {
+    background-color: rgb(112, 216, 216);
+    margin: 30px;
+    width: 400px;
+    height: 600px;
+}
+.shopping-cart {
+    background-color: rgb(11, 139, 148);
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    display: none;
+}
+.close-cart {
+    float: right;
+}
+img {
+    width: 200px;
+    height: 200px;
+}
+i:hover {
+    cursor: pointer;
+}
