@@ -1,3 +1,6 @@
+import express from "express";
+import pool from "../config.mjs";
+
 const main = document.querySelector('main')
 const iconShopping = document.querySelector('i')
 const shoppingCart = document.querySelector('.shopping-cart')
@@ -21,14 +24,19 @@ fetch("http://localhost:3000/api?")
             productPrice.innerHTML = elem.price + '$'
             product.appendChild(productPrice)
 
+            var formBuy = document.createElement('form')
+            formBuy.action = "/users"
+            formBuy.method = "post"
+            product.appendChild(formBuy)
+
             var btnBuy = document.createElement('button')
             btnBuy.textContent = "buy"
-            product.appendChild(btnBuy)
+            formBuy.appendChild(btnBuy)
 
             btnBuy.onclick = (e) => {
                 console.log(btnBuy.parentNode)
                 var productCart = document.createElement('p')
-                productCart.innerHTML = e.target.previousSibling.textContent
+                productCart.innerHTML = e.target.previousSibling.textContent + e.target.firstChild.textContent
                 shoppingCart.appendChild(productCart)
             }
 

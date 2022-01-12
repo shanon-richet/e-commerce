@@ -63,7 +63,10 @@ CREATE TABLE card (
 INSERT INTO card (email_user, title, count, price, total_price)
 VALUES
     ('shanon.richet@gmail.com', 'Mens Cotton Jacket', 2, 55.99, 111.98),
-    ('shanon.richet@gmail.com', 'White Gold Plated Princess', 1, 9.99, 9.99)
+    ('shanon.richet@gmail.com', 'White Gold Plated Princess', 1, 9.99, 9.99),
+    ('hanna.masanjika@gmail.com', 'Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops', 1, 109.95, 109.95),
+    ('hanna.masanjika@gmail.com', 'Solid Gold Petite Micropave', 1, 168, 168)
+
 ;
 
 SELECT card.email_user, users.first_name
