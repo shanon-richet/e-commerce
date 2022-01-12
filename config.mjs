@@ -16,11 +16,4 @@ const config = ({
 const pool = new Pool(config);
 pool.connect();
 
-pool.query('SELECT * FROM users ORDER BY id ASC;', (error, results) => {
-    if (error) {
-        throw error
-    }
-    console.log(results.rows)
-})
-
 export default pool

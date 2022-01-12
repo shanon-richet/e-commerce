@@ -11,8 +11,5 @@ router.route('/api')
             res.status(200).json(results.rows)
         })
     })
-    .put(function (req, res) {
-        res.send('Update the book');
-    })
 
 export default router;

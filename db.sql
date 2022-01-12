@@ -1,10 +1,10 @@
 CREATE TABLE users (
-    "id" SERIAL PRIMARY KEY,
-    "first_name" TEXT NOT NULL,
-    "last_name" TEXT NOT NULL,
-    "email" TEXT NOT NULL,
-    "pass" TEXT NOT NULL,
-    "administrator" boolean
+    id SERIAL PRIMARY KEY,
+    first_name TEXT NOT NULL,
+    last_name TEXT NOT NULL,
+    email TEXT NOT NULL,
+    pass TEXT NOT NULL,
+    administrator boolean,
     );
 
 INSERT INTO users (first_name, last_name, email, pass, administrator)
@@ -53,12 +53,30 @@ VALUES
 ;
 
 CREATE TABLE card (
-    imageURL TEXT NOT NULL,
-    price INTEGER NOT NULL
+    email_user TEXT NOT NULL,
+    title TEXT NOT NULL,
+    count INTEGER NOT NULL,
+    price INTEGER NOT NULL,
+    total_price INTEGER NOT NULL
 );
 
-INSERT INTO card (title, price, count, total)
+INSERT INTO card (email_user, title, count, price, total_price)
 VALUES
-    ('Mens Cotton Jacket', 55.99, 2, 111.98),
-    ('White Gold Plated Princess', 9.99, 1, 9.99)
+    ('shanon.richet@gmail.com', 'Mens Cotton Jacket', 2, 55.99, 111.98),
+    ('shanon.richet@gmail.com', 'White Gold Plated Princess', 1, 9.99, 9.99)
 ;
+
+SELECT card.email_user, users.first_name
+FROM card
+INNER JOIN users
+ON card.email_user=users.email;
+
+SELECT card.email_user, products.title, products.price,
+FROM card
+INNER JOIN products
+ON card.title=products.title;
+
+SELECT card.email_user, products.title, products.price
+FROM card
+INNER JOIN products
+ON card.price=products.price;
